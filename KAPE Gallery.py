@@ -19,8 +19,8 @@ from PIL import ImageTk
 
 
 # Paths for Gallery
-PathGallery='C:\\Users\\user\\Desktop\\Программрование\\Python\\Task2\\arts\\'
-Addres=' "C:\\Users\\user\\Desktop\\Программрование\\Python\Task2\\arts\\" '
+PathGallery=''
+Addres=' "" '
 PathGalleryOpen = Addres
 
 
