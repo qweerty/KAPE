@@ -19,8 +19,8 @@ from PIL import ImageTk
 
 
 # Paths for Gallery
-PathGallery=''
-Addres=' "" '
+PathGallery='C:\\Users\\user\\Desktop\\Программрование\\Python\\Task2\\arts\\'
+Addres=' "C:\\Users\\user\\Desktop\\Программрование\\Python\Task2\\arts\\" '
 PathGalleryOpen = Addres
 
 
@@ -46,7 +46,7 @@ def About():
     Info = """ "KAPE Gallery"\nСоздатели: Круглова А.В.
                      Привалов Е.В.\nСтуденты группы 1652, СПбНИУ ИТМО\n
                      Программа написана на Языке программирования Python 2.7
-                \n\t\t\t\tKAPE Gallery, 2014©All Rights Reserved"""
+                \n\t\t\t\tKAPE Gallery, 2014 ©All Rights Reserved"""
     lab = Label(AboutWindow,text=Info.decode('cp1251'))
     lab.pack() 
 
@@ -94,6 +94,26 @@ def Configuration():
     lab = Label(ConfigurationWindow, text=Info.decode('cp1251'))
     lab.pack()
 
+# Information about us
+def ContactUs():
+    """
+    Данная функция создаёт новое окно Contact us с определённым текстовым набором
+
+    Возвращаемое значение: None
+    """
+    AboutWindow = Tk()
+    AboutWindow.title('Contact us')
+    AboutWindow.maxsize(300,150)
+    AboutWindow.minsize(300,150)
+    Info = """ Contact us:\n\nSocial: \nvk.com/i_lovee/ (Kruglova A.)\nvk.com/indavant/ (Privalov E.)"""
+    Info2 = """\n\nE-mails: \nnactina@list.ru\nclohik94@mail.ru
+            """
+                
+    lab = Label(AboutWindow,text=Info.decode('cp1251'))
+    lab.pack()
+    lab2 = Label(AboutWindow,text=Info2.decode('cp1251'))
+    lab2.pack() 
+
 
 # Changing the image(forward/back)
 def ChangePicture(Shift):
@@ -136,6 +156,8 @@ main_menu.add_cascade(label="Options", menu=file_menu3)
 file_menu3.add_command(label="Configuration", command=Configuration)
 main_menu.add_cascade(label="Help", menu=file_menu2)
 file_menu2.add_command(label="About", command=About)
+file_menu2.add_separator()
+file_menu2.add_command(label="Contact us", command=ContactUs)
 label = Label(root, compound=TOP)
 label.pack()
 # Zone for buttons
